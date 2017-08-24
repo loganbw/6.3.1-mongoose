@@ -1,0 +1,12 @@
+<h1>Movie Watch List!!!</h1>
+<form action="/movie" method="POST">
+  <input type ="text" name="title" placeholder = "Movie title">
+  <input type="submit"  value="Add a Movie!">
+</form>
+<!-- //<a href="/">Add A todo</a> -->
+
+<ul>
+{{#each movies}}
+<li>{{title}}</li>
+{{/each}}
+</ul>
