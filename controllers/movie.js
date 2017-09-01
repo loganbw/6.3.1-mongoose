@@ -16,6 +16,12 @@ var MovieController = {
        });
 
 
+  },
+  delete: function(req, res){
+    var deleteMovie = req.params.id;
+    Movie.deleteOne({"_id": deleteMovie}).then(function(){
+      res.redirect('/movie');
+    });
   }
 };
 module.exports = MovieController;

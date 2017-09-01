@@ -12,6 +12,7 @@ module.exports =function(app) {
 
   movieRouter.get('/', MovieController.list);
   movieRouter.post('/',MovieController.add);
+  movieRouter.get('/:id/delete',MovieController.delete);
   app.use('/', homeRouter);
   app.use('/movie', movieRouter);
 };
